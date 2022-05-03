@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="initial-scale = 1, maximum-scale=1, user-scalable = 0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="MobileOptimized" content="320"/>
+    <title>probehost2</title>
+    <link rel="stylesheet" href="./sp.css">
+  </head>
+  <body>
+    <p id="darkreader">you should probably disable dark reader</p>
+    <h1 style="text-align: center;">probehost2</h1>
+    <p></p>
+    <div>
+      <form id="action" name="action" action="" onsubmit="return(build_url());">
+        <br>
+        <label for="host">host:</label><br>
+        <input type="radio" id="delg" name="host" value="https://de.lg.nils.lol">
+        <label for="delg">de.lg.nils.lol</label><br>
+        <input type="radio" id="uslg" name="host" value="https://us.lg.nils.lol">
+        <label for="uslg">us.lg.nils.lol</label><br>
+        <input type="radio" id="filg" name="host" value="https://fi.lg.nils.lol">
+        <label for="filg">fi.lg.filg.lol</label><br>
+        <br>
+        <label for="cmd">command:</label><br>
+        <input type="radio" id="ping" name="cmd" value="ping">
+        <label for="ping">ping</label><br>
+        <input type="radio" id="mtr" name="cmd" value="mtr">
+        <label for="mtr">mtr</label><br>
+        <input type="radio" id="tracert" name="cmd" value="traceroute">
+        <label for="tracert">traceroute</label><br>
+        <br>
+        <label for="target">target(s):</label><br>
+        <input type="text" id="target" name="target"><br>
+        <br>
+        <label for="cmd">option(s):</label><br>
+        <input type="text" id="options" name="options"><br>
+        <br>
+        <label for="submit">send query:</label><br>
+        <input type="submit" value="submit"/>
+      </form>
+      <script>
+        function build_url() {
+          window.location.href = document.action.host.value+"/"+document.action.cmd.value+"/"+document.action.target.value+"/"+document.action.options.value
+          return false
+        }
+     </script>
+    </div>
+  </body>
+</html>
