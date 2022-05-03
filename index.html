@@ -32,14 +32,13 @@
         <input type="radio" id="tracert" name="cmd" value="traceroute">
         <label for="tracert">traceroute</label><br>
         <br>
-        <label for="target">target(s):</label><br>
+        <label for="target">target(s) (seperated by comma):</label><br>
         <input type="text" id="target" name="target"><br>
         <br>
-        <label for="cmd">option(s):</label><br>
+        <label for="cmd">option(s) (seperated by comma):</label><br>
         <input type="text" id="options" name="options"><br>
         <br>
-        <label for="submit">send query:</label><br>
-        <input type="submit" value="submit"/>
+        <input type="submit" value="send query"/>
       </form>
       <script>
         function build_url() {
