@@ -16,6 +16,22 @@ input {
   left: 60px;
 }
 
+#explanation {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 5px;
+}
+
+#explanation > pre {
+  color: white;
+  background-color: #120f2f;
+  text-indent: 0px;
+  text-align: left;
+  margin: 2px;
+  overflow: visible;
+  font-size: small;
+}
+
 a, .toctext {
   color: #DF85FF !important;
 }
@@ -40,7 +56,6 @@ body {
 /*  font-family: helvetica, arial, sans-serif; */
   line-height: 1.5;
   margin: 0 auto;
-  max-width: 40em;
   padding: 0 1em;
   text-align: center;
 }
