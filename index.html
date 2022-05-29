@@ -16,7 +16,7 @@
     <div>
       <form id="action" name="action" action="" onsubmit="return(build_url());">
         <br>
-        <label for="host">host:</label><br>
+        <label>host:</label><br>
         <input type="radio" id="delg" name="host" value="https://de.lg.nils.lol">
         <label for="delg">de.lg.nils.lol</label><br>
         <input type="radio" id="uslg" name="host" value="https://us.lg.nils.lol">
@@ -24,21 +24,24 @@
         <input type="radio" id="filg" name="host" value="https://fi.lg.nils.lol">
         <label for="filg">fi.lg.nils.lol</label><br>
         <br>
-        <label for="cmd">command:</label><br>
+        <label>command:</label><br>
         <input type="radio" id="ping" name="cmd" value="ping">
         <label for="ping">ping</label><br>
         <input type="radio" id="mtr" name="cmd" value="mtr">
         <label for="mtr">mtr</label><br>
         <input type="radio" id="tracert" name="cmd" value="traceroute">
         <label for="tracert">traceroute</label><br>
+        <input type="radio" id="nping" name="cmd" value="nping">
+        <label for="nping">nping</label><br>
         <br>
         <label for="target">target(s) (separated by comma):</label><br>
         <input type="text" id="target" name="target"><br>
         <br>
-        <label for="cmd">option(s) (separated by comma):</label><br>
+        <label for="options">option(s) (separated by comma):</label><br>
         <input type="text" id="options" name="options"><br>
         <br>
         <input type="submit" value="send query"/>
+        <p><a href="https://github.com/byReqz/probehost2/blob/main/README.md">help</a></p>
       </form>
       <script>
         function build_url() {
@@ -97,6 +100,20 @@ Available options are:
   - ul / udplite: Use UDPLITE for tracerouting (default port is 53) 
   - d / dccp: Use DCCP Request for tracerouting (default port is 33434) 
   - b / back: Guess the number of hops in the backward path and print if it differs 
+      </pre>
+      <pre>
+== nping ==
+The default options are:
+- c3: send 3 pings
+Available options are:
+- 4 / force4: force IPv4
+- 6 / force6: force IPv6
+- u / udp: use UDP
+- t / tcp: use TCP
+- v / verbose: be verbose
+- c1 / count1: send 1 ping
+- c3 / count3: send 3 pings
+- c5 / count5: send 5 pings
       </pre>
     </div>
   </body>
